@@ -22,6 +22,11 @@ const upload = multer({
 }); 
 const router = express.Router();
 
+//TESTING PURPOSES
+router.get("/", async (req,res) => {
+  res.send("Working")
+})
+
 router.post("/users", async (req, res) => {
   const user = new User(req.body);
 
