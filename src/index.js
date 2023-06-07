@@ -6,7 +6,7 @@ const taskRouter = require("./router/task") //task router
 const app = express();
 
 // const port = 3000;
-const port = process.env.PORT //this port is configured in ./config/dev.env for security purposes
+const port = process.env.PORT || 3000 //this port is configured in ./config/dev.env for security purposes
 
 // WITHOUT MIDDLEWARE = route -> route handler
 // WITH MIDDLEWARE = route -> process -> route handler
@@ -19,7 +19,6 @@ const port = process.env.PORT //this port is configured in ./config/dev.env for 
 //     next() //prceed to route handler
 //   }
 // })
-
 
 
 app.use(express.json()); //automatically transform received JSON data into object data
